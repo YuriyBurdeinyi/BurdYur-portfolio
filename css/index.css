@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Anton|Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Anton|Open+Sans|Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Signika&display=swap');
 
 :root {
     scroll-behavior: smooth;
 }
 html {
-	background-image: url(../images/background11.png);
+	background-image: url(../images/bg26.jpg);
 }
 body {	
 	background-color: rgba(255,255,255,0.2);
@@ -24,7 +24,7 @@ body {
 	margin: 0 auto;
 	font-weight: bold;
 	font-size: 2.1em;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Signika', sans-serif;
 	width: 100%;
 	color: #4f2e66;
 }
@@ -37,7 +37,7 @@ body {
 	border-bottom: 3px solid #848b96;
 }
 hr {
-	height: 3px;
+	margin-top: 30px;
 }
 #go-top {
 	position: fixed; 
@@ -60,7 +60,6 @@ hr {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	/*background-color: rgba(71, 73, 76, 0.2);*/
 	background-image: url(../images/stardust.png);
 	margin: 0 auto;
 }
@@ -81,12 +80,19 @@ hr {
 	font-family: 'Pacifico', cursive;
 	margin-left: 20px;
 }
+.logo-img p {
+	margin: 0;
+	padding: 0;
+}
 .logo-name {
-	font-family: 'Pacifico', cursive;
 	font-family: 'Anton', sans-serif;
 	margin-left: 10px;
 	font-size: 20px;
 	color: #fff;
+}
+.logo-name p {
+	margin: 0;
+	padding: 0;
 }
 nav {
 	width: 60%;
@@ -106,6 +112,7 @@ nav {
 	margin-bottom: 10px;
 	font-weight: bold;
 	border-bottom: 3px solid transparent;
+	margin: 0;
 }
 .topnav a:hover {
 	color: #5775a8;
@@ -150,7 +157,6 @@ nav {
 .about-wrap {
 	display: flex;
 	justify-content: space-between;
-	background-image: url(../images/background66.jpg);
 	padding-top: 20px;
 	width: 90%;
 }
@@ -159,28 +165,33 @@ nav {
 	justify-content: center;
 	align-items: center;
 	width: 50%;
-
 }
 .about-img img {
 	width: calc(100% - 30px);
 	border-radius: 50%;
 	filter: sepia(50%) grayscale(30%);
+	box-shadow: 0 0 10px #000;
 }
 .about-desc {
 	display: flex;
-	flex-direction: column;
+	flex-direction: column;	
+	justify-content: center;
 	width: 50%;	
 	text-indent: 1.5em;
 	text-align: justify;
+	font-family: 'Signika', sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	padding-top: 15px;
 }
 .about-desc p {
 	padding: 0;
 	margin: 0 auto;
 	width: 80%;
-	padding: 30px;
+	color: #374966;
 }
 main {
-	background-image: url(../images/background66.jpg);
+	background-image: url(../images/little_pluses.png);
 }
 .portfolio-wrap{
 	display: flex;
@@ -195,28 +206,27 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	font-family: 'Signika', sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	margin-top: 20px;
 }
 .portfolio-desc p {
 	text-indent: 1.5em;
 	text-align: justify;
 	width: 90%;
+	color: #374966;
 }
-.portfolio-columns {
-	text-align: center;
-	display: grid;
-	grid-template-columns: 33% 33% 33%;
+.carousel-inner{
+	height: 600px;
 }
-.portfolio-cards {
-	margin:5px;
+.carousel-indicators  {
+	background-color: rgba(204, 204, 204, 0.7);
+	border-radius: 10px;
 }
-.portfolio-cards img {
-	font-size: cover;
-	max-width: 100%;
-	height: 200px;
-	overflow: hidden;
-}
-.portfolio-img1 {
-	width: 100%;
+.carousel-control-prev-icon, .carousel-control-next-icon {
+	background-color: rgba(204, 204, 204, 0.9);
+	border-radius: 5px;
 }
 #contact {
 	display: flex;
@@ -235,12 +245,17 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	width: 40%;
+	font-family: 'Signika', sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	margin: 20px 10px 0 0;
 }
 .contact-desc p {
 	text-indent: 1.5em;
 	text-align: justify;
 	width: 100%;
 	margin: 0 auto;
+	color: #374966;
 }
 p.contact-variety {
 	text-indent: 0em;
@@ -261,20 +276,20 @@ form fieldset {
 	display: block;
 	padding: 25px 30px;
 }
-form .row {
+form .contact-row {
 	margin: 0 -15px;
 }
-form .col-2 {
+form .contact-col-2 {
 	width: 50%;
 }
-form .col {
+form .contact-col {
 	float: left;
 	min-height: 1px;
 	padding-right: 15px;
 	padding-left: 15px;
 	box-sizing: border-box;
 }
-form .row:after {
+form .contact-row:after {
 	content: '';
 	display: table;
 	clear: both;
@@ -282,7 +297,7 @@ form .row:after {
 form section {
 	margin-bottom: 20px;
 }
-form .input input, form .textarea textarea {
+form .contact-input input, form .contact-textarea textarea {
 	display: block;
 	box-sizing: border-box;
 	width: 100%;
@@ -297,18 +312,23 @@ form .input input, form .textarea textarea {
 	appearance: normal;
 	transition: border-color 0.3s;
 }
-form .textarea textarea {
+.contact-input{
+	width: 100%;
+}
+.contact-textarea {
+	width: 100%;}
+form .contact-textarea textarea {
 	height: auto;
 	resize: none;
 	overflow:auto;
 }
-form .input:hover input,form .textarea:hover textarea,form .checkbox:hover i {
+form .contact-input:hover input,form .contact-textarea:hover textarea,form .checkbox:hover i {
    border-color: #323d3c;
 }
-form .input input:focus,form .textarea textarea:focus,form .checkbox input:focus + i {
+form .contact-input input:focus,form .contact-textarea textarea:focus,form .checkbox input:focus + i {
 	border-color: #323d3c;
 }
-form .button {
+form .contact-button {
 	float: right;
 	height: 39px;
 	overflow: hidden;
@@ -325,7 +345,7 @@ form .button {
 	transition: opacity 0.2s;
 	border-radius: 10px;
 }
-form .button:hover {
+form .contact-button:hover {
 	background-color: #323d3c;
 	opacity: 0.8;
 }
@@ -374,6 +394,9 @@ a.gmail {
 .instagram:hover{
     background: linear-gradient(to bottom left, #7634a7, #d91331, #f4aa01);
 }
+
+
+
 @media (max-width: 1100px){
 .logo {
 	width: 30%;
@@ -382,11 +405,14 @@ nav {
 	width: 70%;
 }
 }
+
+
+
 @media (max-width: 980px) {
 .wrapper {
 	width: 75%;
 }
-.logo-name {
+.logo-name p {
 	font-size: 18px;
 }
 nav div {
@@ -405,9 +431,6 @@ nav div {
 .quote p {
 	font-size: 24px;
 }
-.portfolio-columns {
-	grid-template-columns: 50% 50%;
-}
 }
 
 
@@ -421,6 +444,9 @@ nav div {
 }
 .contact {
 	width: 100%;
+}
+.carousel-inner{
+	height: 450px;
 }
 }
 
@@ -457,6 +483,13 @@ nav div {
 	width: 60%;
 	position: relative;
 }
+.logo-img {
+	width: 40px;
+	height: 40px;
+}
+.logo-img p {
+	font-size: 16px;
+}
 a.mobile {
 	float: right;
 	font-size: 25px;
@@ -479,7 +512,7 @@ nav.topnav.responsive {
 	font-size: 0.6em;
 }
 header .topnav.responsive {
-	height: 56px;
+	height: 60px;
 }
 .topnav.responsive a.mobile {
 	position: absolute;
@@ -496,8 +529,5 @@ header .topnav.responsive {
 }
 .quote p {
 	font-size: 19px;
-}
-.portfolio-columns {
-	grid-template-columns: 100%;
 }
 }
